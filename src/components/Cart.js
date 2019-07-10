@@ -16,7 +16,7 @@ class Cart extends Component {
                         <ul>
                             {cartItems.map(item =>
                                 <li key={item.name}>
-                                <b> {item.name} {item.price} </b> &times; {item.count} = {item.price * item.count}  
+                                <b> {item.name} {(item.price).toFixed(2)} </b> &times; {item.count} = {item.price * item.count}  
                                 <button className="btn btn-danger btn-sm mx-1" onClick={(e) => this.props.handleRemoveFromCart(e, item)}>&times;</button>
                                 </li>
                             )}

@@ -7,7 +7,7 @@ export default class Products extends Component {
             <div className="col-md-4" key={product.name}>
                 <div className="text-center">
                     <p>{product.name}</p>
-                    <p>Price: {product.price}</p>
+                    <p>Price: {(product.price).toFixed(2)}</p>
                     <button className="btn btn-primary" onClick={(e) => this.props.handleAddToCart(e, product)}>Add to cart</button>
                 </div>
             </div>
